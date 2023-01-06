@@ -6,7 +6,7 @@ INSERT INTO airplane(manufacturer, model_number, model_name, image_link) VALUES(
  ('Airbus', '800', 'Airbus A380', 'https://airbus-h.assetsadobe2.com/is/image/content/dam/products-and-solutions/formation-flight/Airbus-50th-years-anniversary-formation-flight-take-off-015.jpg?wid=991&fit=fit,1&qlt=85,0');
 
 -- INSERT INTO STAFF TABLE
-INSERT INTO staff(surname, given_name, address, telephone, salary, staff_role)
+INSERT INTO staff(surname, given_name, address, telephone, salary, category)
 VALUES('Carlton', 'Vanessa', '221B Baker Street, London, UK.', '7873176656', 3500, 'Hostess'),
  ('Drury', 'Thomas', '121 Crawley Road, London UK.', '7872287767', 6000, 'Pilot'),
  ('Ferguson', 'Rebecca', '221B Baker Street, London, UK.', '7871398878', 3500, 'Hostess'),

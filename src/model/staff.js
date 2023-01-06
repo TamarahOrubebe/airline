@@ -7,10 +7,10 @@ const staff = {};
 // add methods to staff object
 staff.addStaff = async (staffDetails) => {
     try {
-        const { surname, given_name, address, telephone, salary, staff_role } = staffDetails;
+        const { surname, given_name, address, telephone, salary, category } = staffDetails;
         const sql = `INSERT INTO staff(surname, given_name, address, telephone, salary, staff_role)
                      VALUES(?, ?, ?, ?, ?, ?)`;
-        const [rows, fields] = await pool.query(sql, [surname, given_name, address, telephone, salary, staff_role]);
+        const [rows, fields] = await pool.query(sql, [surname, given_name, address, telephone, salary, category]);
         return rows;
 
     } catch (error) {
