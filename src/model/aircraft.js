@@ -69,8 +69,9 @@ aircraft.getAircraft = async (aircraftId) => {
 
 aircraft.getAircraftAndPilot = async (aircraftId) => {
      try {
-         const sql = `SELECT manufacturer, model_number, model_name, number_of_seats, * FROM pilot JOIN airplane
-          ON pilot.airplane_id = airplane.id AND airplane.id = ?`;
+         const sql = `SELECT airplane.manufacturer, airplane.model_number, airplane.model_name, airplane.number_of_seats, 
+         CONCAT(staff.surname, " ", staff.given_name) AS pilot_name FROM airplane JOIN pilot
+          ON airplane.id = pilot.airplane_id JOIN staff ON pilot.staff_id = staff.id AND airplane.id = ?`;
         const [row, field] = await pool.query(sql, [aircraftId]);
          return row;
     } catch (error) {
