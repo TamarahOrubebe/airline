@@ -9,7 +9,7 @@ flights.addFlight = async (flightDetails) => {
     try {
         const { origin, destination, flight_date, staff_id, airplane_id, passenger_id, pilot_id, arrival_time, departure_time } = flightDetails;
         const sql = `INSERT INTO flight(origin, destination, flight_date, staff_id, airplane_id, passenger_id, pilot_id, arrival_time,
-            departure_time) VALUES(?, ?, ?, ?, ?, ?, ?)`;
+            departure_time) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)`;
         const [rows, fields] = await pool.query(sql, [origin, destination, flight_date, staff_id, airplane_id, passenger_id, pilot_id,
             arrival_time, departure_time]);
         return rows;
