@@ -17,6 +17,10 @@ aircraftService.getAircraft = async (aircraftId) => {
     return await aircraft.getAircraft(aircraftId);
 
 }
+aircraftService.getAircraftAndPilot = async (aircraftId) => {
+    return await aircraft.getAircraftAndPilot(aircraftId);
+
+}
 
 aircraftService.getAllAircrafts = async () => {
     return await aircraft.getAllAircrafts();

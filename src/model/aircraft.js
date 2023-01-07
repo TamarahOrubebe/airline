@@ -7,10 +7,10 @@ const aircraft = {};
 // add methods to aircraft object;
 aircraft.addAircraft = async (aircraftDetails) => {
     try {
-        const { manufacturer, model_number, model_name, image_link } = aircraftDetails;
-        const sql = `INSERT INTO airplane(manufacturer, model_number, model_name, image_link)
+        const { manufacturer, model_number, model_name, number_of_seats } = aircraftDetails;
+        const sql = `INSERT INTO airplane(manufacturer, model_number, model_name, number_of_seats)
                      VALUES(?, ?, ?, ?)`;
-        const [rows, fields] = await pool.query(sql, [manufacturer, model_number, model_name, image_link ]);
+        const [rows, fields] = await pool.query(sql, [manufacturer, model_number, model_name, number_of_seats]);
         return rows;
     } catch (error) {
         console.log(error)
@@ -66,6 +66,17 @@ aircraft.getAircraft = async (aircraftId) => {
         console.log(error)
     }
 };
+
+aircraft.getAircraftAndPilot = async (aircraftId) => {
+     try {
+         const sql = `SELECT manufacturer, model_number, model_name, number_of_seats, * FROM pilot JOIN airplane
+          ON pilot.airplane_id = airplane.id AND airplane.id = ?`;
+        const [row, field] = await pool.query(sql, [aircraftId]);
+         return row;
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 aircraft.getAllAircrafts = async () => {
     try {

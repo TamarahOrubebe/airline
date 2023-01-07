@@ -57,6 +57,23 @@ passengersController.getPassenger = async (req, res) => {
     
 }
 
+
+passengersController.getPassengerAndBooking = async (req, res) => {
+    try {
+         const passengerId  = Number(req.params.id);
+        const result = await passengersService.getPassengerAndBooking(passengerId);
+        if (!result) {
+            res.json({ message: 'The passenger with the given ID does not exist' }).status(400)
+        } else {
+            res.json(result).status(200);
+        }
+    } catch (error) {
+        console.log(error);
+        
+    }
+    
+}
+
 passengersController.getAllPassengers = async (req, res) => {
     try {
         const result = await passengersService.getAllPassengers();

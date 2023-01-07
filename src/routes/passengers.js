@@ -3,6 +3,7 @@ const router = express.Router();
 const passengersController = require('../controllers/passengersController');
 
 router.get('/', passengersController.getAllPassengers);
+router.get('/bookings', passengersController.getAllPassengers);
 router.get('/:id', passengersController.getPassenger);
 router.post('/', passengersController.addPassenger);
 router.patch('/:id', passengersController.updatePassenger);

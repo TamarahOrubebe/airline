@@ -59,6 +59,22 @@ aircraftController.getAircraft = async (req, res) => {
     
 }
 
+aircraftController.getAircraftsAndPilots = async (req, res) => {
+    try {
+        const aircraftId  = Number(req.params.id);
+        const result = await aircraftService.getAircraftAndPilot(aircraftId);
+    if (!result) {
+        res.json({ message: 'The Aircraft with the given ID does not exist' }).status(400)
+    } else {
+        res.json(result).status(200);
+    }
+    } catch (error) {
+        console.log(error);
+       
+    }
+    
+}
+
 aircraftController.getAllAircrafts = async (req, res) => {
     try {
         const result = await aircraftService.getAllAircrafts();

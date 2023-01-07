@@ -17,6 +17,10 @@ passengersService.getPassenger = async (passengerId) => {
     return await passengers.getPassenger(passengerId);
 }
 
+passengersService.getPassengerAndBooking = async (passengerId) => {
+    return await passengers.getPassengerAndBooking(passengerId);
+}
+
 passengersService.getAllPassengers = async () => {
     return await passengers.getAllpassengers();
     

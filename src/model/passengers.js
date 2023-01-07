@@ -66,6 +66,17 @@ passengers.getPassenger = async (passengerId) => {
     }
 };
 
+passengers.getPassengerAndBooking = async (passengerId) => {
+    try {
+        const sql = `SELECT surname, given_name, address, telephone origin, destination, flight_date, arrival_time,
+        departure_time FROM passenger JOIN flight ON flight.passenger_id = passenger.id AND passenger.id = ?`;
+        const [row, fields] = await pool.query(sql, [passengerId]);
+        return row;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 passengers.getAllpassengers = async () => {
     try {
         const sql = `SELECT * FROM passenger ORDER BY id DESC`;
