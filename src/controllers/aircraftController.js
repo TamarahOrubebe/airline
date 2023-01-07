@@ -59,7 +59,7 @@ aircraftController.getAircraft = async (req, res) => {
     
 }
 
-aircraftController.getAircraftsAndPilots = async (req, res) => {
+aircraftController.getAircraftAndPilots = async (req, res) => {
     try {
         const aircraftId  = Number(req.params.id);
         const result = await aircraftService.getAircraftAndPilot(aircraftId);
