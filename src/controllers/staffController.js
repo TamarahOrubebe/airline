@@ -11,7 +11,7 @@ staffController.addStaff= async (req, res) => {
         if (!result) {
             res.json({message: 'Error adding staff'}).status(400)
         } else {
-            const newResult = await staffController.getAllStaff();
+            const newResult = await staffService.getAllStaff();
             res.json(newResult).status(200);
         }
        
@@ -31,7 +31,7 @@ staffController.updateStaff= async (req, res) => {
           if (!result) {
             res.json({ message: 'Error updating staff' }).status(400);
         } else {
-            const newResult = await staffController.getAllStaff();
+            const newResult = await staffService.getAllStaff();
             res.json(newResult).status(200);
         }
     } catch (error) {

@@ -11,7 +11,7 @@ flightsController.addFlight = async (req, res) => {
         if (!result) {
             res.json({message: 'Error adding Flight'}).status(400)
         } else {
-            const newResult = await flightsController.getAllFlights();
+            const newResult = await flightsService.getAllFlights();
             res.json(newResult).status(200);
         }
        
@@ -31,7 +31,7 @@ flightsController.updateFlight= async (req, res) => {
         if (!result) {
             res.json({ message: 'Error updating Flight' }).status(400);
         } else {
-           const newResult = await flightsController.getAllFlights();
+           const newResult = await flightsService.getAllFlights();
             res.json(newResult).status(200);
         }
     } catch (error) {

@@ -17,7 +17,7 @@ bookingService.getBooking = async (bookingId) => {
     return await booking.getBooking(bookingId);
 }
 
-bookingService.getAllbooking = async () => {
+bookingService.getAllbookings = async () => {
     return await booking.getAllBookings();
 }
 
