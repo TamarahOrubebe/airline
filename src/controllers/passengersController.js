@@ -11,7 +11,8 @@ passengersController.addPassenger= async (req, res) => {
         if (!result) {
             res.json({message: 'Error adding passenger'}).status(400)
         } else {
-            res.json(result).status(200);
+           const newResult = passengersController.getAllPassengers().sort((a, b) => b.id - a.id);
+            res.json(newResult).status(200);
         }
        
     } catch (error) {

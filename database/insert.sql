@@ -1,9 +1,9 @@
 -- iINSERTING DUMMY DATA INTO DATBLES
 
 -- INSERT INTO AIRPLANE TABLE
-INSERT INTO airplane(manufacturer, model_number, model_name, image_link) VALUES('Boeing Commercial', 'MAX 10', 'Boeing 737', 'https://www.boeing.com/resources/boeingdotcom/commercial/737max10/assets/images/gallery/gallery-full-0.jpg'),
- ('Boeing Commercial', '300','Boeing 757', 'https://www.skytamer.com/1.2/2011/20111008-051.jpg'), 
- ('Airbus', '800', 'Airbus A380', 'https://airbus-h.assetsadobe2.com/is/image/content/dam/products-and-solutions/formation-flight/Airbus-50th-years-anniversary-formation-flight-take-off-015.jpg?wid=991&fit=fit,1&qlt=85,0');
+INSERT INTO airplane(manufacturer, model_number, model_name, numnber_of_seats) VALUES('Boeing Commercial', 'MAX 10', 'Boeing 737', 400),
+ ('Boeing Commercial', '300','Boeing 757', 500), 
+ ('Airbus', '800', 'Airbus A380', 600);
 
 -- INSERT INTO STAFF TABLE
 INSERT INTO staff(surname, given_name, address, telephone, salary, category)
@@ -43,17 +43,17 @@ VALUES('Chukwuma', 'Vanessa', '5 Lincoln Street, BrentFord, UK.', '7873798878'),
  ('Mohammad', 'Fatima', '45A Patridge Road, Manchester, UK.', '7880609980');
 
 -- INSERT INTO FLIGHT TABLE
-INSERT INTO flight(origin, destination, flight_date, staff_id, airplane_id, passenger_id, pilot_id)
-VALUES('London', 'Chicago', '2023-01-09', 1, 1, 1, 2),
-('Newcastle', 'Los Angeles', '2023-01-09', 3, 2, 2, 4),
-('Chicago', 'London', '2023-01-10', 1, 1, 1, 2),
-('Los Angeles', 'NewCastle', '2023-01-10', 3, 2, 2, 4),
-('Manchester', 'New York', '2023-01-11', 5, 3, 3, 6),
-('Liverpool', 'Washington DC', '2023-01-11', 7, 1, 4, 8),
-('New York', 'Manchester', '2023-01-12', 5, 3, 3, 6),
-('Washington DC', 'Liverpool', '2023-01-12', 7, 1, 4, 8),
-('Birmingham', 'Florida', '2023-01-12', 9, 2, 5, 10), 
-('Bournemouth', 'New Jersey', '2023-01-12', 1, 3, 6, 2);
+INSERT INTO flight(origin, destination, flight_date, staff_id, airplane_id, passenger_id, pilot_id, arrival_time, departure_time)
+VALUES('London', 'Chicago', '2023-01-09', 1, 1, 1, 2, '07:30:00', '07:30:00'),
+('Newcastle', 'Los Angeles', '2023-01-09', 3, 2, 2, 4, '09:30:00', '05:30:00'),
+('Chicago', 'London', '2023-01-10', 1, 1, 1, 2, '07:30:00', '07:30:00'),
+('Los Angeles', 'NewCastle', '2023-01-10', 3, 2, 2, 4, '09:30:00', '05:30:00'),
+('Manchester', 'New York', '2023-01-11', 5, 3, 3, 6, '07:30:00', '07:30:00' ),
+('Liverpool', 'Washington DC', '2023-01-11', 7, 1, 4, 8, '09:30:00', '05:30:00'),
+('New York', 'Manchester', '2023-01-12', 5, 3, 3, 6, '07:30:00', '07:30:00'),
+('Washington DC', 'Liverpool', '2023-01-12', 7, 1, 4, 8, '09:30:00', '05:30:00' ),
+('Birmingham', 'Florida', '2023-01-12', 9, 2, 5, 10, '07:30:00', '07:30:00'), 
+('Bournemouth', 'New Jersey', '2023-01-12', 1, 3, 6, 2, '09:30:00', '05:30:00');
 
 --INSERT INTO CITY TABLE
 INSERT INTO city(city_name, flight_id, arrival_time, departure_time) 

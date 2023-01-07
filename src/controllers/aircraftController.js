@@ -31,7 +31,9 @@ aircraftController.updateAircraft = async (req, res) => {
         if (!result) {
            res.json({ message: 'Error updating aircraft' }).status(400);
         } else {
-            res.json(result).status(200);
+            const newResult = aircraftController.getAllAircrafts().sort((a, b) => b.id - a.id);
+            res.json(newResult).status(200);
+        
         }
     } catch (error) {
         console.log(error);

@@ -8,7 +8,6 @@ USE DATABASE airline;
 
 CREATE TABLE staff (
 id INT AUTO_INCREMENT,
-   empnum INT,
    surname VARCHAR(50),
    given_name VARCHAR(50),
    address VARCHAR(250),
@@ -32,7 +31,7 @@ id INT AUTO_INCREMENT,
    manufacturer VARCHAR(50),
    model_name VARCHAR(50),
    model_number VARCHAR(50),
-   image_link TEXT,
+   numnber_of_seats INT,
    PRIMARY KEY(id)
    );
 
@@ -73,6 +72,8 @@ id INT AUTO_INCREMENT,
     airplane_id INT,
     passenger_id INT,
     pilot_id INT,
+    arrival_time TIME NOT NULL,
+    departure_time TIME NOT NULL,
    PRIMARY KEY(id),
    FOREIGN KEY(staff_id) REFERENCES staff(id) ON DELETE CASCADE ON UPDATE CASCADE,
    FOREIGN KEY(airplane_id) REFERENCES airplane(id) ON DELETE CASCADE ON UPDATE CASCADE,

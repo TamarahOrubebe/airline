@@ -11,7 +11,8 @@ staffController.addStaff= async (req, res) => {
         if (!result) {
             res.json({message: 'Error adding staff'}).status(400)
         } else {
-            res.json(result).status(200);
+            const newResult = staffController.getAllStaff().sort((a, b) => b.id - a.id);
+            res.json(newResult).status(200);
         }
        
     } catch (error) {
