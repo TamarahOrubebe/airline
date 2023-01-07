@@ -29,9 +29,9 @@ app.use(express.static("public"));
 app.use(cors());
 
 // set up routes;
-app.use('/aircraft',aircraftRouter);
-app.use('/booking',bookingRouter);
-app.use('/flights',flightsRouter);
+app.use('/aircraft', aircraftRouter);
+app.use('/booking', bookingRouter);
+app.use('/flights', flightsRouter);
 app.use('/passengers', passengersRouter);
 app.use('/staff', staffRouter);
 

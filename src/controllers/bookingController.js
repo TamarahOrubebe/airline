@@ -75,7 +75,7 @@ bookingController.getBooking = async (req, res) => {
 
 bookingController.getAllbookings = async (req, res) => {
     try {
-        const result = await bookingService.getAllbooking();
+        const result = await bookingService.getAllbookings();
         if (!result) {
             res.json({ message: 'Error fetching all booking' }).status(400);
         } else {
