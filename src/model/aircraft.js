@@ -69,7 +69,7 @@ aircraft.getAircraft = async (aircraftId) => {
 
 aircraft.getAllAircrafts = async () => {
     try {
-         const sql = `SELECT * FROM airplane`;
+         const sql = `SELECT * FROM airplane ORDER BY id DESC`;
         const [rows, field] = await pool.query(sql);
          return rows;
     } catch (error) {

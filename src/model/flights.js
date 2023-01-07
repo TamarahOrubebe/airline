@@ -69,7 +69,7 @@ flights.getFlight = async (flightId) => {
 
 flights.getAllFlights = async () => {
      try {
-        const sql = `SELECT * FROM flight`;  
+        const sql = `SELECT * FROM flight ORDER BY id DESC`;  
         const [rows, fields] = await pool.query(sql);
         return rows;
 

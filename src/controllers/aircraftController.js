@@ -12,7 +12,9 @@ aircraftController.addAircraft = async (req, res) => {
         if (!result) {
             res.json({message: 'Error adding an aircraft'}).status(400)
         } else {
-            res.json(result).status(200);
+            const newResult = await aircraftController.getAllAircrafts()
+            res.json(newResult).status(200);
+           
         }
         
     } catch (error) {
@@ -31,9 +33,8 @@ aircraftController.updateAircraft = async (req, res) => {
         if (!result) {
            res.json({ message: 'Error updating aircraft' }).status(400);
         } else {
-            const newResult = aircraftController.getAllAircrafts().sort((a, b) => b.id - a.id);
+            const newResult = await aircraftController.getAllAircrafts()
             res.json(newResult).status(200);
-        
         }
     } catch (error) {
         console.log(error);

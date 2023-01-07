@@ -68,8 +68,8 @@ city.getCity = async (cityName) => {
 
 city.getAllCities = async () => {
     try {
-        const sql = `SELECT * FROM ? `;
-        const [rows, fields] = await pool.query(sql, ['city'])
+        const sql = `SELECT * FROM ? ORDER BY ? DESC`;
+        const [rows, fields] = await pool.query(sql, ['city', 'id'])
         return rows;
     } catch (error) {
         console.log(error);
@@ -78,7 +78,7 @@ city.getAllCities = async () => {
 
 city.deleteCity = async (cityName) => {
      try {
-        const sql = `DELETE FROM ? WHERE id = ?`;
+        const sql = `DELETE FROM ? WHERE city_name = ?`;
         const [rows, fields] = await pool.query(sql, ['city', cityName])
         return rows;
     } catch (error) {

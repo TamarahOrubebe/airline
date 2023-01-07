@@ -70,7 +70,7 @@ staff.getStaff = async (staffId) => {
 
 staff.getAllStaff = async () => {
      try {
-        const sql = `SELECT * FROM staff`;
+        const sql = `SELECT * FROM staff ORDER BY id DESC`;
         const [rows, fields] = await pool.query(sql);
         return rows;
 

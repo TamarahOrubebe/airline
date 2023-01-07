@@ -67,7 +67,7 @@ booking.getBooking = async (bookingId) => {
 }
 booking.getAllBookings = async () => {
     try {
-        const sql = `SELECT * FROM booking`;
+        const sql = `SELECT * FROM booking ORDER BY id DESC`;
         const [rows, fields] = await pool.query(sql);
         return rows;
     } catch (error) {

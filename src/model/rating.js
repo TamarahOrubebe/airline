@@ -43,7 +43,7 @@ rating.getRating = async (ratingId) => {
 
 rating.getAllRatings = async () => {
       try {
-        const sql = `SELECT * FROM rating`;
+        const sql = `SELECT * FROM rating ORDER BY id DESC`;
         const [rows, fields] = await pool.query(sql);
         return rows;
 

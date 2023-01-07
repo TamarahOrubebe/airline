@@ -68,7 +68,7 @@ passengers.getPassenger = async (passengerId) => {
 
 passengers.getAllpassengers = async () => {
     try {
-        const sql = `SELECT * FROM passenger`;
+        const sql = `SELECT * FROM passenger ORDER BY id DESC`;
         const [rows, fields] = await pool.query(sql);
         return rows;
     } catch (error) {

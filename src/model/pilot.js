@@ -67,7 +67,7 @@ pilot.getPilot = async (pilotId) => {
 
 pilot.getAllPilots = async () => {
       try {   
-        const sql = `SELECT * FROM pilot`;
+        const sql = `SELECT * FROM pilot ORDER BY id DESC`;
         const [rows, fields] = await pool.query(sql);
         return rows;
     } catch (error) {

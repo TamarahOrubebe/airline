@@ -25,7 +25,7 @@ bookingController.addBooking = async (req, res) => {
         if (!result) {
             res.json({ message: 'Error adding Booking' }).status(400);
         } else {
-            const newResult = bookingController.getAllbookings().sort((a, b) => b.id - a.id);
+            const newResult = await bookingController.getAllbookings();
             res.json(newResult).status(200);
         
         }
@@ -46,7 +46,8 @@ bookingController.updateBooking = async (req, res) => {
         if (!result) {
             res.json({ message: 'Error updating Booking' }).status(400);
         } else {
-            res.json(result).status(200);
+           const newResult = await bookingController.getAllbookings();
+            res.json(newResult).status(200);
         }
        
     } catch (error) {
