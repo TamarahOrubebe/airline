@@ -67,6 +67,7 @@ aircraft.getAircraft = async (aircraftId) => {
     }
 };
 
+// This is the query to search for an aircraft and a list of pilots eligible to fly it
 aircraft.getAircraftAndPilot = async (aircraftId) => {
      try {
          const sql = `SELECT airplane.manufacturer, airplane.model_number, airplane.model_name, airplane.number_of_seats, 

@@ -66,6 +66,7 @@ passengers.getPassenger = async (passengerId) => {
     }
 };
 
+// This is the query to search for passengers and a list of their bookings.
 passengers.getPassengerAndBooking = async (passengerId) => {
     try {
         const sql = `SELECT surname, given_name, address, telephone, origin, destination, flight_date, arrival_time,
