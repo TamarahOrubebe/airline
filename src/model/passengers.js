@@ -33,9 +33,9 @@ passengers.updatePassenger = async (passengerDetails) => {
         keys.forEach((key, index) => {
             // Add a comma separator between column assignments, except for the last one
             if (index < keys.length - 1) {
-                sql += `${key} = ?,`;
+                sql += `${key} = ?, `;
             } else {
-                sql += `${key} = ?`;
+                sql += `${key} = ? `;
             }
         })
 
