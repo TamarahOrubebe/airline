@@ -55,6 +55,8 @@ VALUES('London', 'Chicago', '2023-01-09', 1, 1, 1, 2, '07:30:00', '07:30:00'),
 ('Birmingham', 'Florida', '2023-01-12', 9, 2, 5, 10, '07:30:00', '07:30:00'), 
 ('Bournemouth', 'New Jersey', '2023-01-12', 1, 3, 6, 2, '09:30:00', '05:30:00');
 
+
+
 --INSERT INTO CITY TABLE
 INSERT INTO city(city_name, flight_id, arrival_time, departure_time) 
 VALUES('London', 11, '07:30:00', '07:30:00'), 

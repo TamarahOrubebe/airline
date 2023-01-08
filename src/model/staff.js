@@ -18,7 +18,10 @@ staff.addStaff = async (staffDetails) => {
     }
 }
 
+
+
 staff.updateStaff = async (staffDetails) => {
+    console.log(staffDetails);
      try {
         // Get the keys of the object
         const keys = Object.keys(staffDetails);
