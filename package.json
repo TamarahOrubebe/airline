@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server-install": "npm install --prefix server",
-    "client-install": "npm install --prefix client",
+    "server-install": "npm install --omit=dev --prefix server",
+    "client-install": "npm install --omit=dev --prefix client",
     "install": "npm run client-install && npm run server-install",
     "postinstall": "npm run build --prefix client",
     "start": "npm start --prefix server",
+    "client-start": "npm start --prefix client",
     "test": "npm run test --prefix server && npm run test --prefix client"
   },
   "keywords": [],
