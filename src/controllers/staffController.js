@@ -1,6 +1,6 @@
 // import required modules;
 const staff= require('../model/staff');
-const staffService = require('../services/staffService');
+const staffService = require('../../server/src/services/staffService');
 
 // create staffcontroller object and add methods to it
 const staffController = {};

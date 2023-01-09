@@ -2,9 +2,9 @@
 const booking = require('../model/booking');
 const flights = require('../model/flights');
 const passengers = require('../model/passengers');
-const flightsService = require('../services/flightsService');
-const passengersService = require('../services/passengersService');
-const bookingService = require('../services/bookingService');
+const flightsService = require('../../server/src/services/flightsService');
+const passengersService = require('../../server/src/services/passengersService');
+const bookingService = require('../../server/src/services/bookingService');
 
 // create bookingcontroller object and add methods to it
 const bookingController = {};
@@ -14,12 +14,12 @@ bookingController.addBooking = async (req, res) => {
         const { surname, given_name, address, telephone, origin, destination, flight_date, seat_count, price } = req.body;
         const passengerDetails = { surname, given_name, address, telephone };
         const row = await passengersService.addPassenger(passengerDetails);
-        const passenger_id = row.insertId;
-        const staff_id = Math.floor(Math.random() * 10) + 1;
-        const pilot_id = staff_id % 2 === 0 ? staff_id : staff_id + 1;
-        const airplane_id = Math.floor(Math.random() * 3) + 1;
-        const flightDetails = { origin, destination, flight_date, staff_id, airplane_id, passenger_id, pilot_id }
-        await flightsService.addFlight(flightDetails);
+        // const passenger_id = row.insertId;
+        // const staff_id = Math.floor(Math.random() * 10) + 1;
+        // const pilot_id = staff_id % 2 === 0 ? staff_id : staff_id + 1;
+        // const airplane_id = Math.floor(Math.random() * 3) + 1;
+        // const flightDetails = { origin, destination, flight_date, staff_id, airplane_id, passenger_id, pilot_id }
+        // await flightsService.addFlight(flightDetails);
        
         const result = await bookingService.addBooking(req.body);
         if (!result) {

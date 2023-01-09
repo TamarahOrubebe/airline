@@ -44,7 +44,7 @@ Download `database` directory from this repo and then in the shell,
 import the current DDL and DML schema. Here give the full path to the schema
 
 ```sql
-\i 'C:/Users/.../database/schema.sql'
+\i 'C:/Users/...server/database/schema.sql'
 \q
 ```
 
@@ -82,12 +82,10 @@ cd directory/project
 npm install
 ```
 
-Then create a `.env` file in the root with following content.
+Then create a `.env` file in the server directory with following content.
 You may change database user/password/secret as you may wish.
 
 ```text
-DATABASE_URL=postgres://database_app:password@localhost:5432/airline_reservation_db
-
 INSTANCE_HOST='localhost'
 DB_PORT='3306'
 DB_NAME='airplane'
@@ -95,11 +93,10 @@ DB_USER='godwin'
 DB_PASS='GodwinIdeho2#'
 ```
 
-Then use `nodemon` or `node` to serve the pages.
+Then use the start command to serve the pages.
 
 ```bash
-nodemon start # If nodemon is installed
-node index.js # otherwise
+npm start 
 ```
 
 Now visit <http://localhost:3000/> and confirm that site is running.

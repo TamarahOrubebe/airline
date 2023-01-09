@@ -1,6 +1,6 @@
 // import required modules;
 const flights = require('../model/flights');
-const flightsService = require('../services/flightsService');
+const flightsService = require('../../server/src/services/flightsService');
 
 // create flightscontroller object and add methods to it
 const flightsController = {};

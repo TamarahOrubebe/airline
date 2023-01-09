@@ -23,16 +23,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //Static files
-app.use(express.static(path.join(__dirname, './', 'public')))
+app.use(express.static(path.join(__dirname, '..', 'public')))
 
 //Enable cors for all routes
-app.use(cors({
-    origin: 'http://localhost:3000'
-}));
+app.use(cors({ origin: "*", credentials: true }));
 
 // get home page
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, './', 'public/index.html'))
+    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
 });
 
 // set up routes;
