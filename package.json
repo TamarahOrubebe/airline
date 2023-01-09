@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server-install": "npm install --prefix server --omit=dev",
-    "client-install": "npm install --prefix client --omit=dev",
+    "server-install": "npm install --omit=dev --prefix server ",
+    "client-install": "npm install --omit=dev --prefix client ",
     "install": "npm run client-install && npm run server-install ",
     "postinstall": "npm run build --prefix client",
     "start": "npm start --prefix server",
