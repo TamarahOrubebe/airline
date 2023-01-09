@@ -1,6 +1,6 @@
 // import required modules;
 const passengers = require('../model/passengers');
-const passengersService = require('../../server/src/services/passengersService');
+const passengersService = require('../services/passengersService');
 
 // create passengerscontroller object and add methods to it
 const passengersController = {};

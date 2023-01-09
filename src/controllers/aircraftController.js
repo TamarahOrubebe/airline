@@ -1,6 +1,6 @@
 // import required modules;
 const aircraft = require('../model/aircraft');
-const aircraftService = require('../../server/src/services/aircraftService');
+const aircraftService = require('../services/aircraftService');
 
 // create aircraft controller object and add methods to it
 const aircraftController = {};

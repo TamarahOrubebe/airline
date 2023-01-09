@@ -2,9 +2,9 @@
 const booking = require('../model/booking');
 const flights = require('../model/flights');
 const passengers = require('../model/passengers');
-const flightsService = require('../../server/src/services/flightsService');
-const passengersService = require('../../server/src/services/passengersService');
-const bookingService = require('../../server/src/services/bookingService');
+const flightsService = require('../services/flightsService');
+const passengersService = require('../services/passengersService');
+const bookingService = require('../services/bookingService');
 
 // create bookingcontroller object and add methods to it
 const bookingController = {};
