@@ -28,11 +28,6 @@ app.use(express.static(path.join(__dirname, '..', 'public')))
 //Enable cors for all routes
 app.use(cors({ origin: "*", credentials: true }));
 
-// get home page
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
-});
-
 // set up routes;
 app.use('/aircraft', aircraftRouter);
 app.use('/booking', bookingRouter);
