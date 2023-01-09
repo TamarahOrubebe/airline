@@ -1,4 +1,4 @@
-This Simple Airline Reservation system was developed as the semester project of  [put course and semester detai].
+## Demo site
 
 - You can visit the demo site from [HERE](https://airline-production.up.railway.app/)
 

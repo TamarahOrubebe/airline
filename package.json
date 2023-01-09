@@ -1,19 +1,20 @@
 {
-  "name": "noor-airline",
+  "name": "airline-management",
   "version": "1.0.0",
-  "description": "airline management system",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server-install": "npm install --prefix server",
+    "client-install": "npm install --prefix client",
+    "install": "npm run client-install && npm run server-install",
+    "postinstall": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "test": "npm run test --prefix server && npm run test --prefix client"
   },
-  "author": "Godwin",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.3.3",
-    "promise-mysql": "^5.2.0"
+    "concurrently": "^7.0.0"
   }
 }
