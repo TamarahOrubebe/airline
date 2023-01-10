@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --trace-warnings ./index.js ",
-    "client-start": "npm start --prefix client"
+    "client-install": "npm install --prefix frontend",
+    "client-start": "npm start --prefix frontend"
   },
   "author": "Godwin",
   "license": "ISC",
