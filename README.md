@@ -93,10 +93,13 @@ DB_USER='godwin'
 DB_PASS='GodwinIdeho2#'
 ```
 
-Then use the start command to serve the pages.
+Then use the client-start command to start the frontend in the development server.
+and the npm start comman to start the local server
 
 ```bash
-npm start 
+npm client-start 
+
+npm start
 ```
 
 Now visit <http://localhost:3000/> and confirm that site is running.
