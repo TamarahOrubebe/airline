@@ -1,6 +1,7 @@
 -- iINSERTING DUMMY DATA INTO DATBLES
 
 -- INSERT INTO AIRPLANE TABLE
+START TRANSACTION;
 INSERT INTO airplane(manufacturer, model_number, model_name, numnber_of_seats) VALUES('Boeing Commercial', 'MAX 10', 'Boeing 737', 400),
  ('Boeing Commercial', '300','Boeing 757', 500), 
  ('Airbus', '800', 'Airbus A380', 600);
@@ -82,3 +83,5 @@ VALUES('Chukwuma', 'Vanessa', '5 Lincoln Street, BrentFord, UK.', '7873798878', 
  ('Jefferson', 'Sheela', '23A Goodison Street, Newcastle, UK.', '7876043324', 'Washington DC', 'Liverpool', '2023-01-12', 1, 240),
  ('Murray', 'Ben', '40B Alison Street, Hertfordshire, UK.', '7879710091', 'Birmingham', 'Florida', '2023-01-12', 1, 190), 
  ('Mohammad', 'Fatima', '45A Patridge Road, Manchester, UK.', '7880609980', 'Bournemouth', 'New Jersey', '2023-01-12', 1, 200);
+
+ COMMIT;

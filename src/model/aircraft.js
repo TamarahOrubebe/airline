@@ -40,6 +40,7 @@ aircraft.updateAircraft = async (aircraftDetails) => {
             }
         })
 
+       
         // Add the WHERE clause to the query
         sql += `WHERE id = ?`;
 
