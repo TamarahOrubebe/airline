@@ -1,8 +1,5 @@
 ## Demo site
 
-- You can visit the demo site from [HERE](https://airline-production.up.railway.app/)
-
-
 ## Setup Guide on your local device
 
 ### Database setup
@@ -19,18 +16,18 @@ mysql -U root -p
  Then enter below commands.
 
 ```sql
-CREATE USER 'godwin'@'localhost' IDENTIFIED BY 'GodwinIdeho2#';
-GRANT ALL PRIVILEGES ON * . * TO 'godwin'@'localhost';
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'userpassword';
+GRANT ALL PRIVILEGES ON * . * TO 'username'@'localhost';
 FLUSH PRIVILEGES;
 \q
 ```
 
-Then login to `mysql` as `godwin`.
+Then login to `mysql` as `username`.
 
 ```bash
-mysql -U godwin -p
+mysql -U username -p
 ```
-Then enter the password `GodwinIdeho2#`.
+Then enter the password `userpassword`.
 
 Next create the database `airline` and switch to it.
 
@@ -89,8 +86,8 @@ You may change database user/password/secret as you may wish.
 INSTANCE_HOST='localhost'
 DB_PORT='3306'
 DB_NAME='airplane'
-DB_USER='godwin'
-DB_PASS='GodwinIdeho2#'
+DB_USER='username'
+DB_PASS='userpassword'
 ```
 
 Then use the client-start command to start the frontend in the development server.
